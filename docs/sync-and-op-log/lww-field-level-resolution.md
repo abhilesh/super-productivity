@@ -181,7 +181,8 @@ Checked with `git show v18.15.0:` and `git show v19.1.0:`.
 **The hazards of sending a `'patch'` where a `'replace'` went before:**
 
 1. **Clears.** v18.15.0 ignores `clearedFields`, and v19.1.0 applies it. The
-   receiver-side apply first shipped in v18.21.2 (`633a27b`, checked with
+   LWW payload apply (`clearedFields` in `operation-converter.util.ts`) first
+   shipped in v18.21.2 (`633a27b`, checked with
    `git tag --contains`); [contributor-sync-model.md](./contributor-sync-model.md)
    ("Clearing a field", #9776) rounds this to v18.22.0.
    - An older receiver keeps a stale value, e.g. a cleared `dueWithTime` or
