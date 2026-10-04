@@ -166,11 +166,13 @@ operations with stale vector clocks that immediately conflict.
   the op-log write is asynchronous, and it takes its vector clock under the
   operation-log lock in dispatch order (`concatMap`). A loop of dispatches
   therefore needs no post-loop `await new Promise((r) => setTimeout(r, 0))`:
-  with the yields removed, 50, 200 and 500 dispatches lost, reordered or
-  un-persisted no op through the real store, IndexedDB op log, restart and a
-  SuperSync round trip (measured 2026-10, #10441). A yield never chunked
-  reducer work, never reduced the N+1 upload amplification, and never waited
-  for writes. Existing yields stay until there is evidence either way. In new
+  with the yields removed, no op among 50, 200 or 500 dispatches was lost,
+  reordered or left unpersisted through the real store, IndexedDB op log,
+  restart and a SuperSync round trip (measured 2026-10 in a single tab without
+  lock timeouts, #10441). A yield never chunked reducer work, never reduced the
+  N+1 upload amplification, and never waited for writes. Existing yields are
+  harmless; remove one only in a change that already touches that loop and
+  its tests. In new
   code, prefer one meta-reducer action (no loop), or, where a loop is
   unavoidable and a follow-up depends on its ops, await
   `OperationWriteFlushService.flushPendingWrites()`, which resolves once every
