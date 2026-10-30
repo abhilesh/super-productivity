@@ -274,7 +274,8 @@
         "EVENT_MOVED": "Event moved",
         "EVENT_RESCHEDULED": "Event rescheduled",
         "EVENT_DELETED": "Event deleted",
-        "TIME_BLOCK_ERROR": "Failed to sync time block: {{errTxt}}"
+        "TIME_BLOCK_ERROR": "Failed to sync time block: {{errTxt}}",
+        "WORK_SESSION_ERROR": "Failed to add the tracked time to your calendar. It will be tried again later: {{errTxt}}"
       }
     },
     "CLIPBOARD_IMAGE": {
@@ -346,6 +347,7 @@
       "BREAK_TITLE": "Break",
       "BROWSER_TITLE_BREAK": "Break",
       "BROWSER_TITLE_PAUSED": "Paused",
+      "CANCEL_SESSION": "Cancel session",
       "CLICK_TO_EDIT_DURATION": "Click to edit duration",
       "COMPLETE_FOCUS_SESSION": "Complete focus session",
       "COUNTDOWN": "Countdown",
@@ -802,12 +804,14 @@
         "PLACEHOLDER_3": "Where did focus slip - and how can you protect it?",
         "PLACEHOLDER_4": "Which task gave you energy? Which drained it?",
         "PLACEHOLDER_5": "One thing to repeat. One thing to change.",
+        "PLACEHOLDER_WEEK": "Wins? What pulled you off track? What changes next week?",
         "REMIND_LABEL": "Remind me tomorrow about this",
         "REMINDER_CREATED": "Reflection reminder scheduled for tomorrow",
         "REMINDER_ERROR": "Could not schedule the reminder",
         "REMINDER_NEEDS_TEXT": "Write a reflection before asking for a reminder",
         "REMINDER_TASK_TITLE": "Revisit reflection note",
-        "TITLE": "Reflection Note"
+        "TITLE": "Reflection Note",
+        "TITLE_WEEK": "Reflect on your week"
       }
     },
     "NOTE": {
@@ -1760,13 +1764,15 @@
       "ADD_TASK_BAR": {
         "ADD_EXISTING_TASK": "Add existing task \"{{taskTitle}}\"",
         "CREATE_NEW_TAGS": "Create new tags",
+        "DEADLINE_BUTTON": "Deadline",
         "DUE_BUTTON": "Schedule",
         "ESTIMATE_BUTTON": "Estimate",
+        "NO_SEARCH_MATCHES": "No matching tasks or issues",
         "NOTE_PLACEHOLDER": "Add a note… (Ctrl+Enter to add task)",
-        "PLACEHOLDER_CREATE": "A task title #tag @16:00 t25m ",
+        "PLACEHOLDER_CREATE": "A task title #tag @16:00 t25m",
         "PLACEHOLDER_SEARCH": "Add existing task or issues...",
         "REPEAT_BUTTON": "Repeat",
-        "SEARCH_INFO_TEXT": "Search and add issues and tasks from archive and other projects",
+        "SEARCH_INFO_TEXT": "Search issues and existing tasks to add here",
         "TAGS_BUTTON": "Tags",
         "TODAY": "Today",
         "TOGGLE_ADD_TOP_OR_BOTTOM": "Toggle adding task to top & bottom of list",
@@ -2776,7 +2782,7 @@
       "TOGGLE_PLAY": "Start/stop time tracking for task",
       "TOGGLE_SIDE_NAV": "Focus sidenav",
       "TOGGLE_SIDE_NAV_MODE": "Toggle sidebar compact/full mode",
-      "TOGGLE_TASK_VIEW_CUSTOMIZER_PANEL": "Toggle filter/group/sort panel",
+      "TOGGLE_TASK_VIEW_CUSTOMIZER_PANEL": "Open filter/group/sort menu",
       "TRIGGER_SYNC": "Trigger sync (if configured)",
       "ZOOM_DEFAULT": "Zoom default (desktop only)",
       "ZOOM_IN": "Zoom in (desktop only)",
@@ -2877,6 +2883,7 @@
       "ASSISTANT_ACCESS_KEY_EXISTS": "An access key is set. Replacing it disconnects assistants that use the old one.",
       "ASSISTANT_ACCESS_SETUP": "Connect an assistant",
       "ASSISTANT_ACCESS_SETUP_CLAUDE_CODE": "Claude Code: run this command",
+      "ASSISTANT_ACCESS_SETUP_CLAUDE_DESKTOP": "Claude Desktop: download the extension, open it and paste the access key when asked",
       "ASSISTANT_ACCESS_SETUP_JSON": "Other MCP clients that support HTTP servers:",
       "ASSISTANT_ACCESS_SAVE_ERROR": "Could not save the assistant access setting.",
       "IS_MINIMIZE_TO_TRAY": "Minimize to tray (desktop only)",
@@ -2920,8 +2927,8 @@
       "IS_FOCUS_WINDOW": "Focus application window when reminder is triggered",
       "NOTIFY_ON_DUE_DATE": "Show notifications for tasks planned for today",
       "TITLE": "Reminders",
-      "USE_ALARM_STYLE_REMINDERS": "Use alarm-style notifications (Android only)",
-      "USE_ALARM_STYLE_REMINDERS_DESCRIPTION": "When enabled, reminders use louder alarm sounds and more intrusive notifications. Recommended for critical reminders."
+      "USE_ALARM_STYLE_REMINDERS": "Use alarm-style reminders",
+      "USE_ALARM_STYLE_REMINDERS_DESCRIPTION": "When enabled, reminders use louder alarm sounds and more intrusive notifications. On desktop, a bell rings until you act on the reminder (at most 10 minutes) and the window comes to the front. Recommended for critical reminders."
     },
     "SCHEDULE": {
       "HELP": "The schedule feature provides you with a quick overview over how your planned tasks play out over time. You can find it in the left hand menu under <a href='#/schedule'>'Schedule'</a>. ",
@@ -3206,11 +3213,12 @@
       "SEARCH": "Search everything with <kbd>{{key}}</kbd>.",
       "SEARCH_PHONE": "Search everything from ☰.",
       "SHORT_SYNTAX": "Type <code>#tag</code>, <code>+project</code> or <code>@tomorrow</code> while adding a task. Help → How to shows more.",
-      "SYNC": "Your data stays on this device. Sync and backups are in Settings.",
+      "SYNC": "Your data stays on this device. Sync, backups and import from Todoist or TickTick are in Settings.",
       "TITLE": "Want more?"
     }
   },
   "PDS": {
+    "ADD_OPEN_TASKS_FROM_WEEK": "Add open tasks from this week",
     "ADD_TASKS_FROM_TODAY": "Add tasks from today",
     "ARCHIVED_TASKS": {
       "ONE": "{{count}} completed parent task has been archived",
@@ -3228,6 +3236,7 @@
     "ESTIMATE_TOTAL": "Total estimate:",
     "EVALUATE_DAY": "Evaluate Day",
     "EXPORT_TASK_LIST": "Export Task List",
+    "FINISH_WEEK": "Finish the week",
     "FOCUS_SUMMARY": "Focus Sessions",
     "NO_TASKS": "There are no tasks for this day",
     "PLAN_TOMORROW": "Plan",
@@ -3246,6 +3255,7 @@
     "START_END": "Start – End",
     "SUMMARY_FOR": "Daily Summary for {{dayStr}}",
     "TASKS_COMPLETED": "Tasks Completed",
+    "THIS_WEEK": "This week",
     "TIME_SPENT_AND_ESTIMATE_LABEL": "Time Spent / Estimated",
     "TIME_SPENT_ESTIMATE_TITLE": "Time Spent: Total time spent today. Archived tasks not included. – Time Estimated: Time estimated for tasks worked on today minus the time already spent on them on other days.",
     "TIME_SPENT_TODAY_BY_TAG": "Time Spent today by Tag",
@@ -3567,6 +3577,10 @@
     "SECTION_OPTIONS": "Section options",
     "DONE_TASKS": "Completed Tasks",
     "DONE_TASKS_IN_ARCHIVE": "There are currently no completed tasks here, but there are some already archived.",
+    "EMPTY_HINT_INBOX": "Tasks without a project usually land here. Move them into a project when you know where they belong.",
+    "EMPTY_HINT_PROJECT": "Tasks you add here belong to this project.",
+    "EMPTY_HINT_TAG": "Tasks with this tag appear here. Tasks you add here get this tag automatically.",
+    "EMPTY_HINT_TODAY": "Today shows what you plan to do today. Add a task here, or plan one from your Inbox or the Planner.",
     "ESTIMATE_REMAINING": "Estimate remaining:",
     "FINISH_DAY": "Finish Day",
     "FINISH_DAY_TOOLTIP": "Evaluate your day, move all completed tasks to the archive (optionally) and/or plan your next day.",
